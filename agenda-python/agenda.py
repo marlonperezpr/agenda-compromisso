@@ -37,3 +37,10 @@ class Agenda():
                 print(f"{i}. {compromisso}")
 
 agenda = Agenda
+
+while True:
+    print("\nAgenda")
+    print("1. Adicionar compromisso")
+    print("2. Remover compromisso")
+    print("3. Listar compromissos")
+    print("4. Sair")
