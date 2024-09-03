@@ -44,3 +44,21 @@ while True:
     print("2. Remover compromisso")
     print("3. Listar compromissos")
     print("4. Sair")
+
+    escolha = input("Escolha uma opção: ")
+
+    if escolha == "1":
+        descricao = input("Digite a descrição do compromisso: ")
+        data = input("Digite a data do compromisso (DD/MM/AAAA): ")
+        hora = input("Digite a hora do compromisso (HH:MM): ")
+        agenda.adicionar_compromisso(descricao, data, hora)
+    elif escolha == "2":
+        indice = int(input("Digite o índice do compromisso a remover: ")) - 1
+        agenda.remover_compromisso(indice)  
+    elif escolha == "3":
+        agenda.listar_compromissos()
+    elif escolha == "4":
+        print("Até logo!")
+        break
+    else:
+        print("Opção inválida")
