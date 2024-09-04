@@ -4,7 +4,7 @@ from datetime import datetime
 compromissos = []
 
 class Compromisso:
-    def __init__(self, descricao, data, hora):
+    def __init__(self, descricao, data, hora=None):
         self.descricao = descricao
         self.data = data
         self.hora = hora
@@ -16,7 +16,7 @@ class Agenda():
     def __init__(self):
         self.compromissos = []
 
-    def adicionar_compromisso(self, descricao, data, hora):
+    def adicionar_compromisso(self, descricao, data, hora=None):
         compromisso = Compromisso(descricao, data, hora)
         self.compromissos.append(compromisso)
         print(f"Compromisso adicionado com sucesso!")
@@ -36,7 +36,7 @@ class Agenda():
             for i, compromisso in enumerate(self.compromissos, start=1):
                 print(f"{i}. {compromisso}")
 
-agenda = Agenda
+agenda = Agenda()
 
 while True:
     print("\nAgenda")
@@ -61,4 +61,4 @@ while True:
         print("Até logo!")
         break
     else:
-        print("Opção inválida")
+        print("Opção inválida") 
